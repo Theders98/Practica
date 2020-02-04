@@ -1,0 +1,22 @@
+{
+  "name": "practica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theders98/Practica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Theders98/Practica/issues"
+  },
+  "homepage": "https://github.com/Theders98/Practica#readme",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}
