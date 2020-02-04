@@ -1,12 +1,6 @@
 {
   "peliculas": [
     {
-      "id": 2,
-      "nombre": "Pulp Fiction",
-      "director": "Tarantino",
-      "clasificacion": "Acción"
-    },
-    {
       "id": 3,
       "nombre": "Todo Sobre Mi Madre",
       "director": "Almodobar",

@@ -25,7 +25,7 @@ function getData(){
                         <td>Director:  ${data[i].director}</td>
                         <td>Clasificacion:  ${data[i].clasificacion}</td>
                         <td><button id='botonBorrar' class = 'borrar'>Borrar pelicula</button></td>
-                        <td><button class = 'modificar'>Modificar pelicula</button></td>
+                        <td><button id='botonModificar' class = 'modificar'>Modificar pelicula</button></td>
                      </tr>
                 </div>
             `
