@@ -1,6 +1,12 @@
 {
   "peliculas": [
     {
+      "id": 2,
+      "nombre": "Pulp Fiction",
+      "director": "Tarantino",
+      "clasificacion": "Acción"
+    },
+    {
       "id": 3,
       "nombre": "Todo Sobre Mi Madre",
       "director": "Almodobar",
@@ -29,6 +35,30 @@
       "nombre": "Las Hurdes",
       "director": "Luis Buñuel",
       "clasificacion": "Documental"
+    },
+    {
+      "id": "123",
+      "nombre": "123",
+      "director": "123",
+      "clasificacion": "123"
+    },
+    {
+      "id": "222",
+      "nombre": "2222",
+      "director": "22222",
+      "clasificacion": "2222222"
+    },
+    {
+      "id": 8,
+      "nombre": "pene",
+      "director": "pene",
+      "clasificacion": "pene"
+    },
+    {
+      "id": "200",
+      "nombre": "das",
+      "director": "das",
+      "clasificacion": "dddd"
     }
   ],
   "clasificaciones": [
