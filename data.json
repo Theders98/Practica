@@ -1,12 +1,6 @@
 {
   "peliculas": [
     {
-      "id": 2,
-      "nombre": "Pulp Fiction",
-      "director": "Tarantino",
-      "clasificacion": "Acción"
-    },
-    {
       "id": 3,
       "nombre": "Todo Sobre Mi Madre",
       "director": "Almodobar",
@@ -59,6 +53,54 @@
       "nombre": "das",
       "director": "das",
       "clasificacion": "dddd"
+    },
+    {
+      "id": "223",
+      "nombre": "wefwef",
+      "director": "ewef",
+      "clasificacion": "wefwef"
+    },
+    {
+      "id": "224",
+      "nombre": "pene",
+      "director": "pene",
+      "clasificacion": "pene"
+    },
+    {
+      "id": "225",
+      "nombre": "asdasd",
+      "director": "asdasdasdasdasdasd",
+      "clasificacion": "asdasdasd"
+    },
+    {
+      "id": "226",
+      "nombre": "",
+      "director": "",
+      "clasificacion": ""
+    },
+    {
+      "id": "227",
+      "nombre": "",
+      "director": "",
+      "clasificacion": ""
+    },
+    {
+      "id": "228",
+      "nombre": "fwe",
+      "director": "wef",
+      "clasificacion": "wef"
+    },
+    {
+      "id": "229",
+      "nombre": "ewf",
+      "director": "wef",
+      "clasificacion": "wef"
+    },
+    {
+      "id": "230",
+      "nombre": "",
+      "director": "",
+      "clasificacion": ""
     }
   ],
   "clasificaciones": [

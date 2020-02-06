@@ -75,9 +75,9 @@ $(document).ready(function () {
 
             $('.enviar').click(function () {
                 // esta es una manera de hacerlo autoincremental, se basa en obtener el valor mas alto de las id que han pasado por el get y sumarle 1 cuando entre al añadir
-                lastId++
                 //Aqui junto el formulario serializado junto a la id sumada
-                let data = `id=${lastId++}&` + "" + $('#formData').serialize()
+               lastId++
+                let data = `id=${lastId}&`+""+$('#formData').serialize()
 
                 //peticion con done y con funcionalidad para hacer desaparecer el formulario
                 postData(data).done(function () {
