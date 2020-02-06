@@ -1,9 +1,8 @@
 
-//Con este metodo de hacer la peticion retornamos la promesa y la recorremos desde el otro js usando el .done(), en teoria este es el metodo mas nuevo y el mas usado
-//Y sustituyó al otro metodo de hacer las peticiones
+//Peticion que actua como todas, el tipo es el tipo de dato que insertas, recurso es la ruta a la que vas a hacer la peticion
+//id es si se solicita id la pides, si no la insertas es vacio, data son los datos a insertar
 
 function peticionGlobal(tipo, recurso, id="", data="") {
-   // alert(tipo+"|"+recurso+"|"+id+"|"+data)
     if (tipo == "POST" | tipo == "PUT") { 
         return $.ajax({
             type: tipo,
@@ -20,16 +19,3 @@ function peticionGlobal(tipo, recurso, id="", data="") {
         })
     }
 }
-// function ajaxPetition(type, id = null, data = null, dataType = null, contentData = null) {
-//     let urlPet = "http://localhost:3000/productos";
-//     (id == null) ? urlPet = "http://localhost:3000/productos" : urlPet = "http://localhost:3000/productos/" + id;
-
-//     let peticion = $.ajax({
-//         type: type,
-//         url: urlPet,
-//         data: data,
-//         dataType: dataType,
-//         contentData: contentData
-//     });
-//     return peticion;
-// }
