@@ -1,17 +1,20 @@
 $(document).ready(function () {
     let lastId = 0;
-    $('#formData').hide();
     showData()
-
-
+    deleteButton()
+    modifyButton()
+    addButton()
 
     function showData() {
 
         //recorre la promesa y trae los datos del json
-        getDataAlternativa().done(function (data) {
+        peticionGlobal("GET", "peliculas").done(function (data) {
 
             for (let i = 0; i < data.length; i++) {
-                if (data[i].id >= lastId) { lastId = data[i].id }
+
+                let idSelec = parseInt(data[i].id)
+                console.log(idSelec)
+                if (idSelec >= lastId) { lastId = idSelec }
                 $("#content").append(
 
                     `
@@ -20,27 +23,38 @@ $(document).ready(function () {
                         <td>${data[i].nombre}</td>
                         <td>${data[i].director}</td>
                         <td>${data[i].clasificacion}</td>
-                        <td><button id='botonBorrar' class = 'borrar'>Borrar pelicula</button></td>
-                        <td><button id='botonModificar' class = 'modificar'>Modificar pelicula</button></td>                   
+                        <td><button id='botonBorrar' class = 'btn btn-outline-danger'>Borrar pelicula</button></td>
+                        <td><button id='botonModificar' class = 'btn btn-outline-warning'>Modificar pelicula</button></td>                   
                          
                 </tr>             
             `
                 )
             }
         });
+        peticionGlobal("GET", "clasificaciones", "", "").done(function (data) {
+            for (let i = 0; i < data.length; i++) {
+
+                $("#select_box").append(
+
+                    `
+                    <option>${data[i].nombre}</option>
+
+                    `
+                )
+            }
+        })
         //aqui se usan los metodos, que administran las peticiones, realmente los pongo aqui porque quiero, no hay ninguna razón lógica
-        deleteButton()
-        modifyButton()
-        addButton()
     }
     function deleteButton() {
 
         $(document).on('click', '#botonBorrar', function () {
+
+
             //esto selecciona la id del objeto abuelo para obtener la id del tr que es el que contiene todos los datos del get
             let idObjeto = $(this).parent().parent().attr('id');
 
             //peticion de delete, solo le pasamos la id
-            deleteData(idObjeto)
+            peticionGlobal("DELETE", "peliculas", idObjeto)
 
         })
     }
@@ -49,23 +63,21 @@ $(document).ready(function () {
         $(document).on('click', '#botonModificar', function () {
             //esto selecciona la id del objeto abuelo para obtener la id del tr que es el que contiene todos los datos del get
             let idObjeto = $(this).parent().parent().attr('id');
-            $('.form__id').val(idObjeto)
-            $('#formData').show();
-            $('#addFilmBttn').hide();
+            //esto rellena el formulario para cuando vaya a ser editado
+            peticionGlobal("GET", "peliculas", idObjeto).done(function (data) {
+                $('#form_id').val(data.id)
+                $('#form_nombre').val(data.nombre)
+                $('#form_director').val(data.director)
+                $('#select_box').val(data.clasificacion)
+            })
 
-            $('.enviar').click(function() {
+            $(".modal").modal("show")
 
-                putData(idObjeto, `id=${idObjeto}&`+""+$('#formData').serialize())
-                .done(function () {
-                    console.log($('#formData').serialize())
-                    alert('modificado con exito')
-                    $('#formData').hide();
-                    $('#addFilmBttn').show();
-                })
-                .fail(function(){
-                    alert($('#formData').serialize())
-                })
 
+            $('#enviar').click(function () {
+
+                peticionGlobal("PUT", "peliculas", idObjeto, $('#formData').serialize())
+                    .done()
             })
 
         })
@@ -75,25 +87,21 @@ $(document).ready(function () {
 
         $('#addFilmBttn').click(function () {
 
-            $('#formData').show();
-            $('#addFilmBttn').hide();
+            $(".modal").modal("show")
 
-            $('.enviar').click(function () {
+            lastId++
+
+            $('#form_id').val(lastId)
+
+            $('#enviar').click(function () {
                 // esta es una manera de hacerlo autoincremental, se basa en obtener el valor mas alto de las id que han pasado por el get y sumarle 1 cuando entre al añadir
                 //Aqui junto el formulario serializado junto a la id sumada
-               lastId++
-                let data = `id=${lastId}&`+""+$('#formData').serialize()
 
                 //peticion con done y con funcionalidad para hacer desaparecer el formulario
-                postData(data).done(function () {
-                    alert('añadido con exito')
-                    $('#formData').hide();
-                    $('#addFilmBttn').show();
-                })
 
+                peticionGlobal("POST", "peliculas", "", $('#formData').serialize())
+                    .done()
             })
-
-
         })
     }
 })

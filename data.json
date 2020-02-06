@@ -1,112 +1,112 @@
 {
   "peliculas": [
     {
-      "id": 3,
-      "nombre": "sdad",
-      "director": "dsadasasdd",
-      "clasificacion": "asdasdasd"
+      "id": "8",
+      "nombre": "123",
+      "director": "321",
+      "clasificacion": "Drama"
     },
     {
-      "nombre": "pene",
-      "director": "pene",
-      "clasificacion": "pene",
-      "id": 4
-    },
-    {
-      "nombre": "as",
-      "director": "asd",
-      "clasificacion": "asd",
-      "id": 5
-    },
-    {
-      "nombre": "fsd",
-      "director": "sdffs",
-      "clasificacion": "dfs",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "nombre": "Las Hurdes",
-      "director": "Luis Buñuel",
+      "id": "9",
+      "nombre": "ThedersAPwqeq",
+      "director": "123",
       "clasificacion": "Documental"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": 8
+      "id": "10",
+      "nombre": "Libertoqw",
+      "director": "Mega ultra gayasdadadae",
+      "clasificacion": "Acción"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": "200"
+      "id": "11",
+      "nombre": "Libertoqwewqeqeqwe",
+      "director": "Mega ultra gaye",
+      "clasificacion": "Comedia"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": "223"
+      "id": "14",
+      "nombre": "213",
+      "director": "21321",
+      "clasificacion": "Drama"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": "224"
+      "id": "15",
+      "nombre": "fdsf",
+      "director": "dfsfds",
+      "clasificacion": "Comedia"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": "225"
+      "id": "16",
+      "nombre": "eqwewq",
+      "director": "eqwqwe",
+      "clasificacion": "Drama"
     },
     {
-      "id": "226",
-      "nombre": "",
-      "director": "",
-      "clasificacion": ""
+      "id": "17",
+      "nombre": "asd",
+      "director": "qwe",
+      "clasificacion": "Comedia"
     },
     {
-      "id": "227",
-      "nombre": "",
-      "director": "",
-      "clasificacion": ""
+      "id": "18",
+      "nombre": "qewqwe",
+      "director": "qewqe",
+      "clasificacion": "Comedia"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": "228"
+      "id": "19",
+      "nombre": "Pene",
+      "director": "pene",
+      "clasificacion": "Comedia"
     },
     {
-      "nombre": "",
-      "director": "",
-      "clasificacion": "",
-      "id": "229"
+      "id": "20",
+      "nombre": "dada",
+      "director": "asdadasd",
+      "clasificacion": "Drama"
     },
     {
-      "id": "230",
-      "nombre": "",
-      "director": "",
-      "clasificacion": ""
+      "id": "21",
+      "nombre": "asda",
+      "director": "asdasdsad",
+      "clasificacion": "Drama"
     },
     {
-      "nombre": "",
+      "id": "22",
+      "nombre": "1314",
       "director": "",
-      "clasificacion": "",
-      "id": "231"
+      "clasificacion": "Drama"
     },
     {
+      "id": "23",
       "nombre": "",
       "director": "",
-      "clasificacion": "",
-      "id": "232"
+      "clasificacion": "--Ninguno--"
     },
     {
-      "id": "233",
-      "nombre": "asdasd",
-      "director": "dasdad",
-      "clasificacion": "asdas"
+      "id": "24",
+      "nombre": "dsada",
+      "director": "dsada",
+      "clasificacion": "Comedia"
+    },
+    {
+      "id": "25",
+      "nombre": "5421521",
+      "director": "",
+      "clasificacion": "Drama"
+    },
+    {
+      "id": "26",
+      "nombre": "26",
+      "director": "26",
+      "clasificacion": "--Ninguno--"
+    },
+    {
+      "id": "27",
+      "nombre": "1",
+      "director": "1",
+      "clasificacion": "--Ninguno--"
     }
   ],
   "clasificaciones": [

@@ -7,27 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Peneman</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Peticiones ajax -->
         <script src="scripts/api.js"></script>
         <!-- Aqui se ejecuta todo el codigo js -->
-        <script src="scripts/componentes.js"></script>
+        <script src="scripts/app.js"></script>
 
 </head>
 <body>
 
-    <table id="content" class="content"></table>
+    <table id="content" class="table">
+      <tr"> 
+
+        <td class="font-weight-bold">Nombre</td>
+        <td class="font-weight-bold">Director</td>
+        <td class="font-weight-bold">Clasificacion</td>
+        <td></td>
+        <td></td>                   
+         
+</tr> 
+    </table>
 
     <!-- Formulario oculto para añadir o modificar elementos -->
-    <form id="formData" class="formData">
-      <h1>Adminstrar Pelicula</h1>
-      Nombre: <input type="text" name="nombre"><br>
-      Director: <input type="text" name="director"><br>
-      Clasificacion: <input type="text" name="clasificacion"><br>
-      <input class="enviar" type="submit"><br>
-      <input class="cancelar" type="button"><br>
-    </form>
 
-  <input id="addFilmBttn" type="button" value="Añadir">
+    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Adminstrar Pelicula</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formData" class="formData" action="">
+            <h1></h1>
+            Id:<input id="form_id" type="text" name="id"><br>
+            Nombre: <input id="form_nombre" type="text" name="nombre"><br>
+            Director: <input id="form_director" type="text" name="director"><br>
+            <select id="select_box" name="clasificacion">
+              <option>--Ninguno--</option>
+            </select>
+            <input id="enviar" class="btn btn-outline-primary" type="submit"><br>
+            <input id="cancelar" class="btn btn-outline-danger" type="button" value="Cancelar"><br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <input class="btn btn-outline-success" id="addFilmBttn" type="button" value="Añadir">
 </body>
 </html>
