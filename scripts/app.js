@@ -10,12 +10,12 @@ $(document).ready(function () {
         //recorre la promesa y trae los datos del json
         peticionGlobal("GET", "peliculas").done(function (data) {
 
-        // data sería lo retornado por la peticion get| "i" seria el identificador de posicion | peliculas sería la variable contenedora
-            $.each(data,function(i,peliculas){
+            // data sería lo retornado por la peticion get| "i" seria el identificador de posicion | peliculas sería la variable contenedora
+            $.each(data, function (i, peliculas) {
 
                 let idSelec = parseInt(peliculas.id)
                 if (idSelec >= lastId) { lastId = idSelec }
-                
+
                 $("#content").append(
 
                     `
@@ -30,12 +30,12 @@ $(document).ready(function () {
                 </tr>             
                      `
                 )
-            }) 
-            
+            })
+
         });
 
         peticionGlobal("GET", "clasificaciones", "", "").done(function (data) {
-            $.each(data,function(i,clasificaciones) {
+            $.each(data, function (i, clasificaciones) {
 
                 $("#select_box").append(
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
                     <option>${clasificaciones.nombre}</option>
 
                     `
-            )
+                )
             })
         })
         //aqui se usan los metodos, que administran las peticiones, realmente los pongo aqui porque quiero, no hay ninguna razón lógica
@@ -80,8 +80,7 @@ $(document).ready(function () {
 
             $('#enviar').click(function () {
 
-                peticionGlobal("PUT", "peliculas", idObjeto, $('#formData').serialize())
-                    .done()
+                peticionGlobal("PUT", "peliculas", idObjeto, $('#formData').serialize()).done()
             })
 
         })
@@ -93,7 +92,7 @@ $(document).ready(function () {
 
             $(".modal").modal("show")
 
-              // esta es una manera de hacerlo autoincremental, se basa en obtener el valor mas alto de las id que han pasado por el get y sumarle 1 cuando entre al añadir
+            // esta es una manera de hacerlo autoincremental, se basa en obtener el valor mas alto de las id que han pasado por el get y sumarle 1 cuando entre al añadir
             lastId++
 
             $('#form_id').val(lastId)
@@ -102,8 +101,7 @@ $(document).ready(function () {
 
                 //peticion con done y con funcionalidad para hacer desaparecer el formulario
 
-                peticionGlobal("POST", "peliculas", "", $('#formData').serialize())
-                    .done()
+                peticionGlobal("POST", "peliculas", "", $('#formData').serialize()).done()
             })
         })
     }
