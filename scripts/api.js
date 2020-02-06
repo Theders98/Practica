@@ -28,7 +28,7 @@ function deleteData(data){
 }
 
 function putData(id, data){
-    console.log(JSON.stringify(data))
+    alert(JSON.stringify(data))
     return $.ajax({
         type: "PUT",
         url: `http://localhost:3000/peliculas/${id}`,

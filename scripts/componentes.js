@@ -53,12 +53,17 @@ $(document).ready(function () {
             $('#formData').show();
             $('#addFilmBttn').hide();
 
-            $('.enviar').click(function () {
+            $('.enviar').click(function() {
 
-                putData(idObjeto, $('#formData').serialize()).done(function () {
-                    console.log('xd')
+                putData(idObjeto, `id=${idObjeto}&`+""+$('#formData').serialize())
+                .done(function () {
+                    console.log($('#formData').serialize())
+                    alert('modificado con exito')
                     $('#formData').hide();
                     $('#addFilmBttn').show();
+                })
+                .fail(function(){
+                    alert($('#formData').serialize())
                 })
 
             })
