@@ -58,6 +58,7 @@ $(document).ready(function () {
 
             peticionGlobal("DELETE", "peliculas", idObjeto)
 
+            location.reload()
         })
     }
     function modifyButton() {
@@ -76,7 +77,6 @@ $(document).ready(function () {
             })
 
             $(".modal").modal("show")
-
 
             $('#enviar').click(function () {
 
