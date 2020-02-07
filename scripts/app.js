@@ -9,6 +9,8 @@ $(document).ready(function () {
 
         //recorre la promesa y trae los datos del json
         peticionGlobal("GET", "peliculas").done(function (data) {
+        
+       // peticionGlobal("GET","peliculas","?nombre=Dani") 
 
             // data sería lo retornado por la peticion get| "i" seria el identificador de posicion | peliculas sería la variable contenedora
             $.each(data, function (i, peliculas) {
